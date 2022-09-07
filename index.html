@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content"IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Supermercado</title>
+    <!-- CSS only -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/estilo.css">
+</head>
+
+<body>
+
+    <section class="bg-light p-5 text-center">
+        <label for="Producto" class="fs-2">Agregar Producto</label>
+        <input type="text" name="producto" id="producto">
+
+
+        <label for="Categorias" class="fs-2 ms-5">Elegir Categoría</label>
+        <select name="categorias" id="categorias" form="categorias">
+            <option value="desayuno">Desayuno</option>
+            <option value="frutasyverduras">Verduras y Frutas</option>
+            <option value="proteinas">Proteínas</option>
+            <option value="carbohidratos">carbohidratos</option>
+            <option value="colaciones">Colaciones</option>
+            <option value="higiene">Higiene Personal</option>
+            <option value="aseo">Artículos de Aseo</option>
+            <option value="mascota">Mascota</option>
+            <option value="bebestible">Bebestibles</option>
+        </select>
+
+        <button type="button" id="agregar">Agregar</button>
+    </section>
+
+
+    <section class="mt-5 text-center">
+        <h1 class="mb-5">Lista de Supermercado</h1>
+
+        <div class="text-center">
+            <div id="desayuno" class="desayuno p-5">
+                <h2>Desayuno</h2>
+            </div>
+            <div id="frutasyverduras" class="frutasyverduras p-5">
+                <h2> Frutas y Verduras</h2>
+            </div>
+
+            <div id="proteinas" class="proteinas p-5">
+                <h2> Proteínas</h2>
+            </div>
+            <div id="carbohidratos" class="carbohidratos p-5">
+                <h2> Carbohidratos</h2>
+            </div>
+            <div id="colaciones" class="colaciones p-5">
+                <h2> Colaciones</h2>
+            </div>
+            <div id="higiene" class="higiene p-5">
+                <h2> Higiene Personal</h2>
+            </div>
+            <div id="aseo" class="aseo p-5">
+                <h2> Artículos de Aseo</h2>
+            </div>
+            <div id="mascota" class="mascota p-5">
+                <h2>Mascota</h2>
+            </div>
+            <div id="bebestible" class="bebestible p-5">
+                <h2>Bebestibles</h2>
+            </div>
+        </div>
+
+
+        <script src="./assets/index.js"></script>
+</body>
+
+</html>
