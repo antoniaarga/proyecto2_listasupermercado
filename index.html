@@ -16,65 +16,70 @@
 </head>
 
 <body>
+ <main>
+<h1 class="text-center">Lista de Supermercado</h1>
 
-    <section class="bg-light p-5 text-center">
-        <label for="Producto" class="fs-2">Agregar Producto</label>
-        <input type="text" name="producto" id="producto">
+  
+    <section class="formulario">
+
+        <form>
+
+        <div class="mb-3">
+                <label for="nombre-producto" class="form-label"></label>
+                <input type="text" class="form-control" id="nombre-producto" placeholder="Agregar Producto">
+              </div>
+
+              <div class="mb-3">
+                <label for="cantidad" class="form-label"></label>
+                <input type="numbre" class="form-control" id="cantidad" placeholder="unidades">
+              </div>
 
 
-        <label for="Categorias" class="fs-2 ms-5">Elegir Categoría</label>
-        <select name="categorias" id="categorias" form="categorias">
-            <option value="desayuno">Desayuno</option>
-            <option value="frutasyverduras">Verduras y Frutas</option>
-            <option value="proteinas">Proteínas</option>
-            <option value="carbohidratos">carbohidratos</option>
-            <option value="colaciones">Colaciones</option>
-            <option value="higiene">Higiene Personal</option>
-            <option value="aseo">Artículos de Aseo</option>
-            <option value="mascota">Mascota</option>
-            <option value="bebestible">Bebestibles</option>
-        </select>
+        <div class="input-group mb-3">
+            
+            <select class="form-select" id="categoria" aria-label="Example select with button addon">
+              <option selected>Elegir Categoría</option>
+              <option value="Desayuno">Desayuno</option>
+              <option value="Frutas y verduras">Frutas y verduras</option>
+              <option value="Lacteos">Lacteos</option>
+              <option value="Proteína">Proteína</option>
+              <option value="Carbohidratos">Carbohidratos</option>
+              <option value="Snacks Saludables">Snacks Saludables</option>
+              <option value="Golosínas">Golosínas</option>
+              <option value="Bebestibles">Bebestibles</option>
+              <option value="Enlatados">Enlatados</option>
+              <option value="Postres">Postres</option>
+              <option value="Aderezos">Aderezos</option>
+              <option value="Congelados">Congelados</option>
+              <option value="Higiene Personal">Higiene Personal</option>
+              
+            </select>
+          </div>
+        
+          <button id="agregar" type="button" class="btn btn-dark">Agregar</button>
+        </form>
+    </section>
+</main> 
 
-        <button type="button" id="agregar">Agregar</button>
+    <section id="lista" class="card">
+        <!-- <article>
+            <div>
+            <p>Pan</p>
+            <p>2 bolsas</p>
+            <p>Desayuno</p>
+            </div>
+            <div>
+            <button> Editar </button>
+            <button>Borrar </button>
+             </div>
+        </article> -->
+
     </section>
 
 
-    <section class="mt-5 text-center">
-        <h1 class="mb-5">Lista de Supermercado</h1>
+  
 
-        <div class="text-center">
-            <div id="desayuno" class="desayuno p-5">
-                <h2>Desayuno</h2>
-            </div>
-            <div id="frutasyverduras" class="frutasyverduras p-5">
-                <h2> Frutas y Verduras</h2>
-            </div>
-
-            <div id="proteinas" class="proteinas p-5">
-                <h2> Proteínas</h2>
-            </div>
-            <div id="carbohidratos" class="carbohidratos p-5">
-                <h2> Carbohidratos</h2>
-            </div>
-            <div id="colaciones" class="colaciones p-5">
-                <h2> Colaciones</h2>
-            </div>
-            <div id="higiene" class="higiene p-5">
-                <h2> Higiene Personal</h2>
-            </div>
-            <div id="aseo" class="aseo p-5">
-                <h2> Artículos de Aseo</h2>
-            </div>
-            <div id="mascota" class="mascota p-5">
-                <h2>Mascota</h2>
-            </div>
-            <div id="bebestible" class="bebestible p-5">
-                <h2>Bebestibles</h2>
-            </div>
-        </div>
-
-
-        <script src="./assets/index.js"></script>
+    <script src="./assets/main.js"></script>
 </body>
 
 </html>
