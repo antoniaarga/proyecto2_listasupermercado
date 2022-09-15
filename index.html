@@ -17,12 +17,12 @@
 
 <body>
  <main>
-<h1 class="text-center">Lista de Supermercado</h1>
+<h1 class="text-center">Ingresar Productos</h1>
 
   
-    <section class="formulario">
+    <section class="formulario d-flex justify-content-center mb-5">
 
-        <form>
+        <form class="d-flex flex-column">
 
         <div class="mb-3">
                 <label for="nombre-producto" class="form-label"></label>
@@ -31,7 +31,7 @@
 
               <div class="mb-3">
                 <label for="cantidad" class="form-label"></label>
-                <input type="numbre" class="form-control" id="cantidad" placeholder="unidades">
+                <input type="number" class="form-control" id="cantidad" placeholder="unidades">
               </div>
 
 
@@ -55,26 +55,25 @@
               
             </select>
           </div>
+
+          <div class="mb-3">
+            <label for="fecha" class="form-label"></label>
+            <input type="date" class="form-control" id="fecha" placeholder="Fecha">
+          </div>
         
           <button id="agregar" type="button" class="btn btn-dark">Agregar</button>
         </form>
     </section>
 </main> 
 
-    <section id="lista" class="card">
-        <!-- <article>
-            <div>
-            <p>Pan</p>
-            <p>2 bolsas</p>
-            <p>Desayuno</p>
-            </div>
-            <div>
-            <button> Editar </button>
-            <button>Borrar </button>
-             </div>
-        </article> -->
-
-    </section>
+<section class="container">
+   <h1 class="text-center">Lista de Supermercado</h1>
+   
+   <div id="lista" class="w-100 d-flex flex-column justify-content-start" >
+        
+   </div>
+   
+</section>
 
 
   

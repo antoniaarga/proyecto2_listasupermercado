@@ -4,6 +4,7 @@ botonAgregar.addEventListener('click', (evento) => agregarProducto(evento))
 let producto = document.getElementById('nombre-producto')
 let cantidad = document.getElementById('cantidad')
 let categoria = document.getElementById('categoria')
+let fecha = document.getElementById('fecha')
 let = contenedor = document.getElementById ('lista')
 
 let nombres =[]
@@ -15,8 +16,8 @@ function agregarProducto(evento) {
     const nombre = {
         producto: producto.value,
         cantidad: cantidad.value,
-        categoria:categoria.value
-
+        categoria: categoria.value,
+        fecha: fecha.value
     }
 
     
@@ -61,13 +62,14 @@ function mostrarProductos() {
     nombres.forEach((nombre) =>{
         
         contenedor.innerHTML +=  ` 
-        <article>
-        <div>
-        <p>${nombre.producto}</p>
-        <p>${nombre.cantidad}</p>
-        <p>${nombre.categoria}</p>
+        <article class="d-flex mb-1">
+        <div class="card d-flex flex-row ">
+        <p class="me-5 ms-5">${nombre.producto}</p>
+        <p class="me-5">${nombre.cantidad}</p>
+        <p class="me-5">${nombre.categoria}</p>
+        <p class="me-5">${nombre.fecha}</p>
         </div>
-        <div>
+        <div class="d-flex flex-row">
         <button class="btn btn-dark" onClick="editarProducto(this,'${nombre.producto}')"> Editar </button>
         <button class="btn btn-dark" onClick="eliminarProducto(this,'${nombre.producto}')">Borrar </button>
          </div>
