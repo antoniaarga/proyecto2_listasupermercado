@@ -1,56 +1,81 @@
-
-.container{
-    background-color: #f1f2f7;
+body {
+    background-color: #f1f2f7
 }
-.categoria{
+
+.categoria {
     background-color: #F9B4B8;
     margin-bottom: 10px;
     padding: 1em 2em;
     border-radius: 10px;
-    
+
 }
+
 header {
     background-image: url(./header-image.png);
     height: 500px;
-    background-position:center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+
 }
-.mini-logo{
+
+.mini-logo {
     width: 200px;
 }
 
-.card{
+.formulario {
+    width: 70%;
+}
+
+.card {
     border: 0ch;
 }
 
-.nombre-producto{
+.nombre-producto {
     font-size: smaller;
     padding-top: 10px;
 }
 
-.nombre-cantidad{
+.nombre-cantidad {
     font-size: smaller;
     padding-top: 10px;
 }
 
 .boton {
-    
     width: 30px;
     height: 30px;
 }
 
 .edit {
-    
     font-size: x-small;
-    
-    
 }
 
 .delete {
-    
-    
     font-size: x-small;
+}
 
+@media screen and (min-width:538px) {
+    header {
+        background-image: url(./header-image_desktop.png);
+        height:500px;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .formulario{
+        width: 50%;
+    }
+    .nombre-producto {
+        font-size:large;
+        padding-top: 20px;
+    }
+    
+    .nombre-cantidad {
+        font-size: large;
+        padding-top: 20px;
+    }
+    .boton-1 {
+        margin-top: 40px;
+    }
 }
