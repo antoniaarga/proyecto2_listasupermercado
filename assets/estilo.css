@@ -9,6 +9,14 @@
     border-radius: 10px;
     
 }
+header {
+    background-image: url(./header-image.png);
+    height: 500px;
+    background-position: 10% center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 5em;
+}
 
 .card{
     border: 0ch;
