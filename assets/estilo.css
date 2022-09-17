@@ -54,6 +54,7 @@ header {
     font-size: x-small;
 }
 
+
 @media screen and (min-width:538px) {
     header {
         background-image: url(./header-image_desktop.png);
