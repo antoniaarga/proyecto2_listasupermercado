@@ -7,26 +7,22 @@ botonActualizar.addEventListener('click',(evento) => actualizarProducto(evento) 
 let producto = document.getElementById('nombre-producto')
 let cantidad = document.getElementById('cantidad')
 let categoria = document.getElementById('categoria')
-let fecha = document.getElementById('fecha')
+
 let contenedor = document.getElementById ('lista')
 let productoEnEdicion 
-
-
 
 let nombres =[]
 
 function agregarProducto(evento) {
     evento.preventDefault()
 
-    
     const nombre = {
         producto: producto.value,
         cantidad: cantidad.value,
         categoria: categoria.value,
-        fecha: fecha.value
+        
     }
 
-    
  nombres.push(nombre)
 
  guardarEnLS()
@@ -41,11 +37,10 @@ function editarProducto(boton, item) {
     producto.value = productoEnEdicion.producto
     cantidad.value = productoEnEdicion.cantidad
     categoria.value = productoEnEdicion.categoria
-    fecha.value = productoEnEdicion.fecha
+    
    
     botonActualizar.classList.remove('d-none')
-    botonAgregar.classList.add('d-none')
-    
+    botonAgregar.classList.add('d-none')  
 }
 
 function actualizarProducto(){
@@ -55,7 +50,7 @@ function actualizarProducto(){
             producto: producto.value,
             cantidad: cantidad.value,
             categoria: categoria.value,
-            fecha: fecha.value
+            
         }
 console.log(nuevoProducto)
 let indice = nombres.findIndex(nombre=> nombre.producto == productoEnEdicion.producto)
@@ -74,19 +69,19 @@ function eliminarProducto(boton, producto) {
     nombres = nombres.filter((nombre) => nombre.producto !== producto)
     
     guardarEnLS()
-
 }
 
 function leerProductos() {
    let nombresEnLS = window.localStorage.getItem('nombres')
+   console.log(nombresEnLS)
    if(nombresEnLS === null) {
     nombres = []
    }else  nombres = JSON.parse(nombresEnLS)
    
 
-   mostrarProductos()
-  
+   mostrarProductos() 
 }
+
 function limpiarInput() {
     producto.value = ''
     cantidad.value = ''
@@ -94,6 +89,8 @@ function limpiarInput() {
 }
 
 function mostrarProductos() {
+
+ 
     contenedor.innerHTML = ''
 
     let categorias =[]
@@ -107,7 +104,7 @@ function mostrarProductos() {
     categorias.forEach (cat =>{
         contenedor.innerHTML += `
         <div class="categoria" id="${cat}"> 
-        <h3>${cat}</h3>
+        <h5>${cat}</h5>
         </div>
         `
         let filtrados = nombres.filter(nombre=>nombre.categoria == cat) 
@@ -115,27 +112,30 @@ function mostrarProductos() {
         let contenedorCategoria = document.getElementById(cat)
         
         filtrados.forEach(nombre =>{
+            
             contenedorCategoria.innerHTML +=  ` 
-            <article class="d-flex mb-1">
-            <div class="card d-flex flex-row ">
-            <p class="me-5 ms-5">${nombre.producto}</p>
-            <p class="me-5">${nombre.cantidad}</p>
-            <p class="me-5">${nombre.categoria}</p>
-    
-            <p class="me-5">${nombre.fecha}</p>
+         <article class="card  mb-1 d-flex ">
+             <div class="d-flex  justify-content-around align-items-center">
+
+             
+                    <div class="d-flex justify-content-around ">
+                    <p class="nombre-producto  ">${nombre.producto}</p>
+                    </div>
+                   
+                    <div class="d-flex  justify-content-around ">
+                    <p class="nombre-cantidad ms-4 me-4  text-secondary">${nombre.cantidad}</p>
+                    </div>
+            
+
+                    <div class="d-flex justify-content-around ">
+                    <button class="boton btn btn-dark me-1 " onClick="editarProducto(this,'${nombre.producto}')"> <i class="fa-regular fa-pen-to-square edit "></i> </button>
+                    <button class="boton btn btn-dark" onClick="eliminarProducto(this,'${nombre.producto}')"><i class="fa-regular fa-trash-can delete"></i></button>
+                    </div>
             </div>
-            <div class="d-flex flex-row">
-            <button class="btn btn-dark" onClick="editarProducto(this,'${nombre.producto}')"> Editar </button>
-            <button class="btn btn-dark" onClick="eliminarProducto(this,'${nombre.producto}')">Borrar </button>
-             </div>
-        </article>
-    
+         </article>
             ` 
-
         } )
-
     } )
-
  }
 
 function guardarEnLS() {

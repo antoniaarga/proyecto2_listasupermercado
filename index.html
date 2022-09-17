@@ -12,15 +12,16 @@
         rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
         crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/5dca93262f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/estilo.css">
 </head>
 
-<body>
- <main>
-<h1 class="text-center">Ingresar Productos</h1>
+<body class="container">
+ <main class="d-flex justify-content-center flex-column">
+<h3 class="text-center">Ingresar Productos</h3>
 
   
-    <section class="formulario d-flex justify-content-center mb-5">
+    <section class="formulario  mb-5">
 
         <form class="d-flex flex-column">
 
@@ -31,7 +32,7 @@
 
               <div class="mb-3">
                 <label for="cantidad" class="form-label"></label>
-                <input type="number" class="form-control" id="cantidad" placeholder="unidades">
+                <input type="text" class="form-control" id="cantidad" placeholder="unidades">
               </div>
 
 
@@ -39,27 +40,26 @@
             
             <select class="form-select" id="categoria" aria-label="Example select with button addon">
               <option selected>Elegir Categoría</option>
-              <option value="Desayuno">Desayuno</option>
-              <option value="Frutas y verduras">Frutas y verduras</option>
-              <option value="Lacteos">Lacteos</option>
-              <option value="Proteína">Proteína</option>
-              <option value="Carbohidratos">Carbohidratos</option>
-              <option value="Snacks Saludables">Snacks Saludables</option>
-              <option value="Golosínas">Golosínas</option>
-              <option value="Bebestibles">Bebestibles</option>
-              <option value="Enlatados">Enlatados</option>
-              <option value="Postres">Postres</option>
-              <option value="Aderezos">Aderezos</option>
-              <option value="Congelados">Congelados</option>
-              <option value="Higiene Personal">Higiene Personal</option>
+              <option id="desayuno" value="Desayuno">Desayuno</option>
+              <option id="frutas-verduras" value="Frutas y verduras">Frutas y verduras</option>
+              <option id="lacteos" value="Lacteos">Lacteos</option>
+              <option id="proteina" value="Proteína">Proteína</option>
+              <option id="carbohidratos" value="Carbohidratos">Carbohidratos</option>
+              <option id="snacks" value="Snacks Saludables">Snacks Saludables</option>
+              <option id="golosina" value="Golosínas y Picoteo">Golosínas y Picoteo</option>
+              <option id="bebestibles" value="Bebestibles">Bebestibles</option>
+              <option id="conservas" value="Conservas">Conservas</option>
+              <option id="postres" value="Postres">Postres</option>
+              <option id="condimentos" value="Condimentos">Condimentos</option>
+              <option id="congelados" value="Congelados">Congelados</option>
+              <option id="higiene" value="Higiene Personal">Higiene Personal</option>
+              <option id="mascota"value="Mascota">Mascota</option>
+              <option id="hogar"value="Hogar y Artículos de Aseo">Hogar y Articulos de Aseo</option>
               
             </select>
           </div>
 
-          <div class="mb-3">
-            <label for="fecha" class="form-label"></label>
-            <input type="date" class="form-control" id="fecha" placeholder="Fecha">
-          </div>
+
         
           <button id="agregar" type="button" class="btn btn-dark">Agregar</button>
           <button id="actualizar" type="button" class="d-none btn btn-dark">Actualizar</button>
@@ -68,9 +68,9 @@
 </main> 
 
 <section class="container">
-   <h1 class="text-center">Lista de Supermercado</h1>
+   <h3 class="text-center">Lista de Supermercado</h3>
    
-   <div id="lista" class="w-100 d-flex flex-column justify-content-start" >
+   <div id="lista" class="w-100" >
         
    </div>
    

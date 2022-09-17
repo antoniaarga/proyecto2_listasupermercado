@@ -1,6 +1,41 @@
+
+.container{
+    background-color: #f1f2f7;
+}
 .categoria{
+    background-color: mistyrose;
     margin-bottom: 10px;
     padding: 1em 2em;
     border-radius: 10px;
-    border: 2px solid blue;
+    
+}
+
+.card{
+    border: 0ch;
+}
+
+.nombre-producto{
+    font-size: smaller;
+    padding-top: 10px;
+}
+
+.nombre-cantidad{
+    font-size: smaller;
+    padding-top: 10px;
+}
+
+.boton {
+    
+    width: 25px;
+    height: 25px;
+}
+
+.edit {
+    font-size: small;
+    padding-top: 1px;
+}
+
+.delete {
+    font-size: small;
+
 }
