@@ -2,84 +2,97 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content"IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista Supermercado</title>
-    <!-- CSS only -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-        crossorigin="anonymous">
-        <script src="https://kit.fontawesome.com/5dca93262f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./assets/estilo.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content"IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista Supermercado</title>
+  <!-- CSS only -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/5dca93262f.js"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./assets/estilo.css">
 </head>
 
 <body class="container">
- <header class="d-flex justify-content-center flex-column">
-<h3 class="text-center text-light">Ingresar Productos</h3>
 
-  
-    <section class="formulario  mb-5">
-
-        <form class="d-flex flex-column">
-
-        <div class="mb-3">
-                <label for="nombre-producto" class="form-label"></label>
-                <input type="text" class="form-control" id="nombre-producto" placeholder="Agregar Producto">
-              </div>
-
-              <div class="mb-3">
-                <label for="cantidad" class="form-label"></label>
-                <input type="text" class="form-control" id="cantidad" placeholder="unidades">
-              </div>
+  <header class="d-flex flex-column justify-content-around align-items-center">
+    <h3 class="text-center text-light mt-5">Ingresar Productos</h3>
 
 
-        <div class="input-group mb-3">
-            
-            <select class="form-select" id="categoria" aria-label="Example select with button addon">
-              <option selected>Elegir Categoría</option>
-              <option id="desayuno" value="Desayuno">Desayuno</option>
-              <option id="frutas-verduras" value="Frutas y verduras">Frutas y verduras</option>
-              <option id="lacteos" value="Lacteos">Lacteos</option>
-              <option id="proteina" value="Proteína">Proteína</option>
-              <option id="carbohidratos" value="Carbohidratos">Carbohidratos</option>
-              <option id="snacks" value="Snacks Saludables">Snacks Saludables</option>
-              <option id="golosina" value="Golosínas y Picoteo">Golosínas y Picoteo</option>
-              <option id="bebestibles" value="Bebestibles">Bebestibles</option>
-              <option id="conservas" value="Conservas">Conservas</option>
-              <option id="postres" value="Postres">Postres</option>
-              <option id="condimentos" value="Condimentos">Condimentos</option>
-              <option id="congelados" value="Congelados">Congelados</option>
-              <option id="higiene" value="Higiene Personal">Higiene Personal</option>
-              <option id="mascota"value="Mascota">Mascota</option>
-              <option id="hogar"value="Hogar y Artículos de Aseo">Hogar y Articulos de Aseo</option>
-              
-            </select>
-          </div>
+    <div class="formulario mb-5 w-75">
 
 
-        
-          <button id="agregar" type="button" class="btn btn-dark">Agregar</button>
-          <button id="actualizar" type="button" class="d-none btn btn-dark">Actualizar</button>
-        </form>
-    </section>
-</header> 
 
-<section class="container">
-   <h3 class="text-center">Lista de Supermercado</h3>
-   
-   <div id="lista" class="w-100" >
-        
-   </div>
-   
-</section>
+      <div class="mb-3 d-flex text-center ">
+        <label for="nombre-producto" class="form-label"></label>
+        <input type="text" class="form-control" id="nombre-producto"
+          placeholder="Agregar Producto">
+      </div>
+
+      <div class="mb-3 justify-content-center text-center">
+        <label for="cantidad" class="form-label"></label>
+        <input type="text" class="form-control" id="cantidad"
+          placeholder="Unidades">
+      </div>
 
 
-  
+      <div class="input-group mb-3  d-flex">
 
-    <script src="./assets/main.js"></script>
+        <select class="form-select" id="categoria"
+          aria-label="Example select with button addon">
+          <option selected>Elegir Categoría</option>
+          <option id="desayuno" value="Desayuno">Desayuno</option>
+          <option id="frutas-verduras" value="Frutas y Verduras">Frutas y
+            Verduras</option>
+          <option id="lacteos" value="Lacteos">Lacteos</option>
+          <option id="proteina" value="Proteína">Proteína</option>
+          <option id="carbohidratos" value="Carbohidratos">Carbohidratos
+          </option>
+          <option id="snacks" value="Snacks Saludables">Snacks Saludables
+          </option>
+          <option id="golosina" value="Golosínas y Picoteo">Golosínas y Picoteo
+          </option>
+          <option id="bebestibles" value="Bebestibles">Bebestibles</option>
+          <option id="conservas" value="Conservas">Conservas</option>
+          <option id="postres" value="Postres">Postres</option>
+          <option id="condimentos" value="Condimentos">Condimentos</option>
+          <option id="congelados" value="Congelados">Congelados</option>
+          <option id="higiene" value="Higiene Personal">Higiene Personal
+          </option>
+          <option id="mascota" value="Mascota">Mascota</option>
+          <option id="hogar" value="Hogar y Artículos de Aseo">Hogar y Articulos
+            de Aseo</option>
+
+        </select>
+      </div>
+
+
+      <div class="text-center">
+        <button id="agregar" type="button" class="btn btn-dark">Agregar</button>
+        <button id="actualizar" type="button"
+          class="d-none btn btn-dark">Actualizar</button>
+      </div>
+      </form>
+      </section>
+  </header>
+
+  <section class="container">
+    <h3 class="text-center mt-3 mb-4">Lista de Supermercado</h3>
+
+    <div id="lista" class="w-100">
+
+    </div>
+
+  </section>
+
+
+
+
+  <script src="./assets/main.js"></script>
 </body>
 
 </html>

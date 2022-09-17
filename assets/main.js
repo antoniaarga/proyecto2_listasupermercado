@@ -103,7 +103,7 @@ function mostrarProductos() {
 
     categorias.forEach (cat =>{
         contenedor.innerHTML += `
-        <div class="categoria" id="${cat}"> 
+        <div class="categoria text-light" id="${cat}"> 
         <h5>${cat}</h5>
         </div>
         `
@@ -118,7 +118,7 @@ function mostrarProductos() {
              <div class="d-flex  justify-content-around align-items-center">
 
              
-                    <div class="d-flex justify-content-around ">
+                    <div class="d-flex justify-content-around ms-2 text-dark">
                     <p class="nombre-producto  ">${nombre.producto}</p>
                     </div>
                    
@@ -127,9 +127,9 @@ function mostrarProductos() {
                     </div>
             
 
-                    <div class="d-flex justify-content-around ">
-                    <button class="boton btn btn-dark me-1 " onClick="editarProducto(this,'${nombre.producto}')"> <i class="fa-regular fa-pen-to-square edit "></i> </button>
-                    <button class="boton btn btn-dark" onClick="eliminarProducto(this,'${nombre.producto}')"><i class="fa-regular fa-trash-can delete"></i></button>
+                    <div class="d-flex justify-content-around text-center me-2">
+                    <button class="boton btn btn-dark me-1 p-1 fa-regular fa-pen-to-square edit" onClick="editarProducto(this,'${nombre.producto}')" </button>
+                    <button class="boton btn btn-dark p-1 fa-regular fa-trash-can delete" onClick="eliminarProducto(this,'${nombre.producto}')"></button>
                     </div>
             </div>
          </article>

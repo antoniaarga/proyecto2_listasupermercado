@@ -3,7 +3,7 @@
     background-color: #f1f2f7;
 }
 .categoria{
-    background-color: mistyrose;
+    background-color: #F9B4B8;
     margin-bottom: 10px;
     padding: 1em 2em;
     border-radius: 10px;
@@ -11,11 +11,11 @@
 }
 header {
     background-image: url(./header-image.png);
-    height: 500px;
-    background-position: 10% center;
+    height: 400px;
+    background-position:center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 0 5em;
+    
 }
 
 .card{
@@ -34,16 +34,20 @@ header {
 
 .boton {
     
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
 }
 
 .edit {
-    font-size: small;
-    padding-top: 1px;
+    
+    font-size: x-small;
+    
+    
 }
 
 .delete {
-    font-size: small;
+    
+    
+    font-size: x-small;
 
 }
